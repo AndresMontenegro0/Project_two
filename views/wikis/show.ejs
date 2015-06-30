@@ -1,10 +1,12 @@
+<link rel="stylesheet" type="text/css" href="/stylessheets/styles.css">
 <h1><%= wiki.title%></h1>
 <h4><em><%= wiki.author %></em></h4>
+    <h6><%= wiki.created_at %></h6>
 <p><%= wiki.content %></p>
 
 
 
 
 <% if (currentUser && currentUser == wiki.author){ %>
-<% include edi_buttons.ejs %>
+<% include edit_buttons.ejs %>
 <% } %>

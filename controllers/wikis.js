@@ -1,12 +1,13 @@
-var express = require('express'),
-    router = express.Router(),
-    Wiki = require('../models/wiki.js');
+var express  = require('express'),
+    router   = express.Router(),
+    Wiki     = require('../models/wiki.js');
 
 //Index
 
     router.get('/', function (req, res){
         Wiki.find({}, function (err, wikisArray){
         if (err) {
+            console.log(err);
         } else if(req.session.currentUser) {
             res.render('wikis/index', {wikis: wikisArray});
         }else {
@@ -28,6 +29,7 @@ router.post('/', function (req,res){
     newWiki.author = req.session.currentUser;
 
     newWiki.save(function (err, wiki){
+
         if(err) {
             console.log(err);
         } else {
@@ -46,7 +48,7 @@ router.get('/:id', function (req,res){
         if(err) {
             console.log(err);
         }else {
-            res.render('wiki/show', {wiki:foundWiki,
+            res.render('wikis/show', {wiki:foundWiki,
             currentUser: req.session.currentUser});
         };
     });
@@ -82,7 +84,7 @@ router.patch('/:id', function (req, res){
     var mongoId = req.params.id;
     var updatedWiki = req.body.wiki;
 
-    Wiki.update({_id:mongoId}, updateWiki, function (err, foundWiki){
+    Wiki.update({_id:mongoId}, updatedWiki, function (err, foundWiki){
         if(err) {
             console.log(err);
         } else {

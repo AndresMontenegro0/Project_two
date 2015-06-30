@@ -18,6 +18,14 @@ router.post('/', function (req, res){
     })
 });
 
+//Logout
+
+router.delete('/logout', function(req, res) {
+    console.log('hey');
+    req.session.currentUser = undefined;
+    res.redirect(301, '/');
+});
+
 //Login
 
 router.get('/login', function (req, res){
@@ -36,6 +44,7 @@ router.post('/login', function (req, res){
         };
     });
 });
+
 
 module.exports = router;
 
