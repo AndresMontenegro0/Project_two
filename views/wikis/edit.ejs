@@ -1,0 +1,10 @@
+<form action="/wikis/<%=wiki._id%>/edit/?_method=PATCH" method="post">
+    <label>Author: </label>
+    <input type="text" name="wiki[author]" value="<%= wiki.author%>" >
+    <label>To Do:</label>
+    <input type="text" name="wiki[title]" value="<%= wiki.title%>" >
+    <label>Description:</label>
+    <textarea name ="wiki[content]"><%= wiki.content%></textarea>
+    <input type="submit" value="Update Article"/>
+
+</form>

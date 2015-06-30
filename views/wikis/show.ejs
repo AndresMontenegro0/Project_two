@@ -1,0 +1,10 @@
+<h1><%= wiki.title%></h1>
+<h4><em><%= wiki.author %></em></h4>
+<p><%= wiki.content %></p>
+
+
+
+
+<% if (currentUser && currentUser == wiki.author){ %>
+<% include edi_buttons.ejs %>
+<% } %>

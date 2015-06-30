@@ -1,0 +1,9 @@
+<dl>
+    <% wikis.forEach(function(wiki, i) { %>
+    <a href="/wikis/<%=wikis._id%>">
+        <dt><%= wikis.title %> </dt>
+    </a>
+    <% }); %>
+</dl>
+
+<a href="/wikis/new">New Article~</a>
