@@ -12,7 +12,7 @@ router.get('/new', function (req, res){
 //create
 
 router.post('/', function (req, res){
-    bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.genSalt(2, function(err, salt) {
         bcrypt.hash(req.body.user.password, salt, function(err, hash){
             req.body.user.password = hash;
 

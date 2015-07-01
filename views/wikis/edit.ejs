@@ -1,10 +1,16 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <div id="container">
+    <div id="header"><h1>Screwed up a Lorem Ipsum? Fix it!</h1></div>
+        <div id="main">
 <form action="/wikis/<%=wiki._id%>/?_method=PATCH" method="post">
-    <label>Author: </label>
-    <input type="text" name="wiki[author]" value="<%= wiki.author%>" >
-    <label>Article:</label>
-    <input type="text" name="wiki[title]" value="<%= wiki.title%>" >
-    <label>Description:</label>
-    <textarea name ="wiki[content]"><%= wiki.content%></textarea>
-    <input type="submit" value="Update Article"/>
+    <label>Author: </label><br/>
+    <input type="text" name="wiki[author]" value="<%= wiki.author%>" ><br/>
+    <label>Article:</label><br/>
+    <input type="text" name="wiki[title]" value="<%= wiki.title%>" ><br/>
+    <label>Description:</label><br/>
+    <textarea name ="wiki[content]"><%= wiki.content%></textarea><br/>
+    <input type="submit" value="Update Article"/><br/>
 
+        </div>
+    </div>
 </form>

@@ -7,7 +7,7 @@ body {
 a {
   color: #00B7FF;
   text-decoration: none;
-  color: red;
+  color: blue;
 }
 
 h4{
@@ -49,6 +49,7 @@ h4{
 #main{
   width: 1000px;
   position: inherit;
+  overflow: hidden;
 }
 
 #footer{
@@ -57,4 +58,13 @@ h4{
   background-color: #999999;
   color: white;
   text-align: right;
+}
+
+#nav dl{
+  margin-left: 200px;
+
+}
+
+textarea {
+  height: auto;
 }

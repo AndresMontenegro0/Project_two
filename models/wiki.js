@@ -5,7 +5,9 @@ var wikiSchema = Schema({
     author: String,
     title: {type: String, required: true},
     content: String,
-    created_at:{type: Date, default: Date.now}
+    category: String,
+    created_at:{type: Date, default: Date},
+    updated_at: {type: Date, default: Date.now},
 });
 
 var Wiki = mongoose.model("Wiki", wikiSchema);

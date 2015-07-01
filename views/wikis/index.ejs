@@ -1,5 +1,8 @@
-<link rel="stylesheet" type="text/css" href="/stylessheets/styles.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 
+    <div id="container">
+    <div id="header"><h1>All Articles</h1></div>
+    <div id="nav"></div>
 <dl>
     <% wikis.forEach(function(wiki, i) { %>
     <a href="/wikis/<%=wiki._id%>">
@@ -8,4 +11,7 @@
     <% }); %>
 </dl>
 
-<a href="/wikis/new">Add a New Article~</a>
+<a href="/wikis/new">Add a New Article</a>
+
+</div>
+</div>
