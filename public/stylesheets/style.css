@@ -30,6 +30,7 @@ h4{
 
 #content{
   padding: 10px;
+  overflow: hidden;
 }
 
 #nav{
