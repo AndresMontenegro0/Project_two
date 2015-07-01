@@ -9,6 +9,7 @@ var express  = require('express'),
         if (err) {
             console.log(err);
         } else if(req.session.currentUser) {
+            console.log(wikisArray)
             res.render('wikis/index', {wikis: wikisArray});
         }else {
             res.redirect(301, '/../');

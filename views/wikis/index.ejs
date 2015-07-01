@@ -1,8 +1,9 @@
 <link rel="stylesheet" type="text/css" href="/stylessheets/styles.css">
+
 <dl>
     <% wikis.forEach(function(wiki, i) { %>
-    <a href="/wikis/<%=wikis._id%>">
-        <dt><%= wikis.title %> </dt>
+    <a href="/wikis/<%=wiki._id%>">
+        <dt><%= wiki.title %> </dt>
     </a>
     <% }); %>
 </dl>
