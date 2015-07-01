@@ -1,12 +1,35 @@
-<link rel="stylesheet" type="text/css" href="/stylessheets/styles.css">
-<h1><%= wiki.title%></h1>
-<h4><em><%= wiki.author %></em></h4>
-    <h6><%= wiki.created_at %></h6>
-<p><%= wiki.content %></p>
+<html>
+<head>
+    <title>Displayed Article</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+
+<div id="container">
+    <div id="header"><h1><%= wiki.title%></h1>
+</div>
+    <div id="nav">
+        <% if (currentUser && currentUser == wiki.author){ %>
+        <% include edit_buttons.ejs %>
+        <% } %>
+    </div>
+    <div id="main">
+<h4><b>By:</b><em><%= wiki.author %></em></h4>
+    <p><%= wiki.content %></p>
+    <p><b>Category: </b><%= wiki.category %></p>
+    </div>
+  <div id="footer">
+      <h6>Created on:<%= wiki.created_at %></h6>
+  </div>
 
 
 
 
-<% if (currentUser && currentUser == wiki.author){ %>
-<% include edit_buttons.ejs %>
-<% } %>
+
+
+
+</div>
+</body>
+
+
+</html>
